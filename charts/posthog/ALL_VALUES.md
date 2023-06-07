@@ -620,6 +620,9 @@ The following table lists the configurable parameters of the PostHog chart and t
 | clickhouse.image.tag | string | `"22.8.11.15"` | ClickHouse image tag. Note: PostHog does not support all versions of ClickHouse. Please override the default only if you know what you are doing. |
 | clickhouse.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | clickhouse.image.pullSecrets | list | `[]` |  |
+| clickhouse.serviceAccount.create | bool | `false` | serviceAccount with this name should be created |
+| clickhouse.serviceAccount.name | string | `nil` | name of the serviceAccount |
+| clickhouse.serviceAccount.annotations | object | `{}` | Configures annotation for the serviceAccount |
 | clickhouse.tolerations | list | `[]` | Toleration labels for clickhouse pod assignment |
 | clickhouse.serviceAccountName | string | `""` | Alternative serviceAccountName for clickhouse pod |
 | clickhouse.affinity | object | `{}` | Affinity settings for clickhouse pod |
