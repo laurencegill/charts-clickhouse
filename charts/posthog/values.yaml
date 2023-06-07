@@ -1734,6 +1734,8 @@ clickhouse:
 
   # -- Toleration labels for clickhouse pod assignment
   tolerations: []
+  # -- Alternative serviceAccountName for clickhouse pod
+  serviceAccountName: ""
   # -- Affinity settings for clickhouse pod
   affinity: {}
   # -- Clickhouse resource requests/limits. See more at http://kubernetes.io/docs/user-guide/compute-resources/
