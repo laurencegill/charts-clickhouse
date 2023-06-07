@@ -1,6 +1,6 @@
 # PostHog Helm chart configuration
 
-![Version: 30.22.2](https://img.shields.io/badge/Version-30.22.2-informational?style=flat-square) ![AppVersion: 1.43.1](https://img.shields.io/badge/AppVersion-1.43.1-informational?style=flat-square)
+![Version: 30.22.2](https://img.shields.io/badge/Version-30.22.2-informational?style=flat-square) ![AppVersion: 1.43.0](https://img.shields.io/badge/AppVersion-1.43.0-informational?style=flat-square)
 
 ## Configuration
 
@@ -621,6 +621,7 @@ The following table lists the configurable parameters of the PostHog chart and t
 | clickhouse.image.pullPolicy | string | `"IfNotPresent"` | Image pull policy |
 | clickhouse.image.pullSecrets | list | `[]` |  |
 | clickhouse.tolerations | list | `[]` | Toleration labels for clickhouse pod assignment |
+| clickhouse.serviceAccountName | string | `""` | Alternative serviceAccountName for clickhouse pod |
 | clickhouse.affinity | object | `{}` | Affinity settings for clickhouse pod |
 | clickhouse.resources | object | `{}` | Clickhouse resource requests/limits. See more at http://kubernetes.io/docs/user-guide/compute-resources/ |
 | clickhouse.securityContext.enabled | bool | `true` |  |
