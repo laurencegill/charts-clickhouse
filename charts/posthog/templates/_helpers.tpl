@@ -182,6 +182,7 @@ Create the name of the service account to use
 {{- if .Values.clickhouse.serviceAccount.create -}}
     {{ default "clickhouse-serviceaccount" .Values.clickhouse.serviceAccount.name }}
 {{- end -}}
+{{- end -}}
 
 {{- define "posthog.helmOperation" -}}
 {{- if .Release.IsUpgrade -}}
