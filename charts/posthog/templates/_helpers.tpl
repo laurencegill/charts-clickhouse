@@ -178,6 +178,11 @@ Create the name of the service account to use
 {{- end -}}
 {{- end -}}
 
+{{- define "posthog.clickhouse.serviceAccountName" -}}
+{{- if .Values.clickhouse.serviceAccount.create -}}
+    {{ default "clickhouse-serviceaccount" .Values.clickhouse.serviceAccount.name }}
+{{- end -}}
+
 {{- define "posthog.helmOperation" -}}
 {{- if .Release.IsUpgrade -}}
     upgrade
