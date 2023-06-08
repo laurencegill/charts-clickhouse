@@ -73,6 +73,8 @@ spec:
         spec:
           {{- if .Values.clickhouse.serviceAccountName }}
           serviceAccountName: {{ toYaml .Values.clickhouse.serviceAccountName | nindent 12 }}
+          {{- else if .Values.clickhouse.serviceAccount.create }}
+          serviceAccountName: {{ template "posthog.clickhouse.serviceAccount" . }}
           {{- end }}
           {{- if .Values.clickhouse.affinity }}
           affinity: {{ toYaml .Values.clickhouse.affinity | nindent 12 }}

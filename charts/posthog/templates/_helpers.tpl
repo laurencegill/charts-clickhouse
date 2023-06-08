@@ -178,7 +178,7 @@ Create the name of the service account to use
 {{- end -}}
 {{- end -}}
 
-{{- define "posthog.clickhouse.serviceAccountName" -}}
+{{- define "posthog.clickhouse.serviceAccount" -}}
 {{- if .Values.clickhouse.serviceAccount.create -}}
     {{ default "clickhouse-serviceaccount" .Values.clickhouse.serviceAccount.name }}
 {{- end -}}
