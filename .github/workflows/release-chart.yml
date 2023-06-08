@@ -1,6 +1,7 @@
 name: Release Chart
 
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - charts/**
